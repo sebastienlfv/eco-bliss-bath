@@ -105,9 +105,6 @@ describe("E2E - Panier (API vérifiée via UI)", () => {
 
       const initialStock = productWithStock.availableStock;
 
-      cy.visit(appUrl);
-      login(user.username, user.password);
-
       cy.visit(`${appUrl}/products/${productWithStock.id}`);
 
       cy.get('[data-cy="detail-product-stock"]')
@@ -157,9 +154,6 @@ describe("E2E - Panier (API vérifiée via UI)", () => {
         );
         return;
       }
-
-      cy.visit(appUrl);
-      login(user.username, user.password);
 
       cy.visit(`${appUrl}/products/${productWithStock.id}`);
 

@@ -15,3 +15,8 @@
 
 // Import commands.js using ES2015 syntax:
 import './commands'
+
+// Réinitialise la BDD avant chaque test pour un état propre et reproductible
+beforeEach(() => {
+  cy.task('resetDb')
+})
